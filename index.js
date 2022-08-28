@@ -1,13 +1,8 @@
 const Stack = () => {
     let __array = [];
-    let __inputArray = [];
     const arrayIndexLast = () => __array.length - 1;
     const push = (item) => {
         __array.push(item);
-        __inputArray = [
-            arrayIndexLast(),
-            ...__inputArray
-        ];
     };
     const pop = () => {
         const reversedArray = __array.reverse();
