@@ -5,23 +5,19 @@ const Stack = () => {
     const push = (item) => {
         __array.push(item);
         __inputArray = [
-            __array.length - 1,
+            arrayIndexLast(),
             ...__inputArray
         ];
     };
     const pop = () => {
-        const itemIndex = __inputArray[0];
-        const returnValue = __array[itemIndex];
-        __array = __array.filter((_, index) => index !== itemIndex);
-        __inputArray = __inputArray.slice(1);
+        const reversedArray = __array.reverse();
+        const returnValue = reversedArray[0];
+        __array = reversedArray.slice(1).reverse();
         return returnValue;
     };
-    const popBack = () => {
-        const reverseInput = __inputArray.reverse();
-        const itemIndex = reverseInput[0];
-        const returnValue = __array[itemIndex];
-        __array = __array.filter((_, index) => index !== itemIndex);
-        __inputArray = reverseInput.slice(1).reverse().map((item) => item - 1);
+    const pop_back = () => {
+        const returnValue = __array[0];
+        __array = __array.slice(1);
         return returnValue;
     };
     const front = () => __array[0];
@@ -31,24 +27,17 @@ const Stack = () => {
     const data = () => __array;
     const clear = () => {
         __array = [];
-        __inputArray = [];
     };
     return ({
         push,
         pop,
-        pop_back: popBack,
-        popBack,
-        // size,
+        popBack: pop_back,
         length: size,
-        // front,
         first: front,
-        // back,
         last: back,
-        // empty,
         isEmpty: empty,
         data,
         clear,
     });
 };
-
 module.exports = Stack
