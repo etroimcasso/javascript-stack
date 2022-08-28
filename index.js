@@ -1,4 +1,4 @@
-const CPPVector = () => {
+const Stack = () => {
     let __array = [];
     let __inputArray = [];
     const arrayIndexLast = () => __array.length - 1;
@@ -51,4 +51,4 @@ const CPPVector = () => {
     });
 };
 
-module.exports = CPPVector
+module.exports = Stack
