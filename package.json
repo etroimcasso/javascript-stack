@@ -1,0 +1,11 @@
+{
+  "name": "@tomassotech/cppvector",
+  "version": "1.0.0",
+  "description": "C++ Vector implemented in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Tomasso <eric@tomasso.tech>",
+  "license": "MIT"
+}
