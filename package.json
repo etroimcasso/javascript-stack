@@ -1,6 +1,6 @@
 {
   "name": "@tomassotech/js-stack",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "C++ Vector (Stack) implemented in Javascript",
   "main": "index.js",
   "scripts": {
