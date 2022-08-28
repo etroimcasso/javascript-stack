@@ -2,11 +2,6 @@ const CPPVector = () => {
     let __array = [];
     let __inputArray = [];
     const arrayIndexLast = () => __array.length - 1;
-    const inputArrayIndexLast = () => __inputArray.length - 1;
-    const debug = () => {
-        console.log("ARRAY:", __array);
-        console.log("INPUT", __inputArray);
-    };
     const push = (item) => {
         __array.push(item);
         __inputArray = [
@@ -19,14 +14,12 @@ const CPPVector = () => {
         const returnValue = __array[itemIndex];
         __array = __array.filter((_, index) => index !== itemIndex);
         __inputArray = __inputArray.slice(1);
-        debug();
         return returnValue;
     };
     const popBack = () => {
         const reverseInput = __inputArray.reverse();
         const itemIndex = reverseInput[0];
         const returnValue = __array[itemIndex];
-        debug();
         __array = __array.filter((_, index) => index !== itemIndex);
         __inputArray = reverseInput.slice(1).reverse().map((item) => item - 1);
         return returnValue;
