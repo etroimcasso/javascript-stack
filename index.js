@@ -27,7 +27,7 @@ const Stack = () => {
     const front = () => __array[0];
     const back = () => __array[arrayIndexLast()];
     const size = () => __array.length;
-    const empty = () => size() > 0;
+    const empty = () => size() <= 0;
     const data = () => __array;
     const clear = () => {
         __array = [];
